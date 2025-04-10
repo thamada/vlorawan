@@ -82,7 +82,7 @@
 3. **スクリプトの実行**
 
    ```bash
-   python your_script.py
+   python3 ./main-otaa.py
    ```
 
 - スクリプト起動時に OTAA Join 手続きが開始され、Join Request が送信されます。
