@@ -77,7 +77,16 @@
 
 2. **デバイス認証情報の設定**
 
-スクリプト内の JOIN_EUI、DEV_EUI、APP_KEY を、お使いの TTN 環境で登録されている実際の値に変更してください。
+スクリプト内のGATEWAY_EUI、JOIN_EUI、DEV_EUI、APP_KEY を、お使いのTTN環境で登録されている実際の値に変更してください。
+それぞれ該当する箇所はスクリプト内の以下の場所になります。
+```
+GATEWAY_EUI = bytes.fromhex("F000000000000001")
+
+# Device credentials (replace with your actual values)
+JOIN_EUI = bytes.fromhex("123400000000000F")[::-1]    # LSB
+DEV_EUI = bytes.fromhex("0123456789ABCDEF")[::-1]     # LSB
+APP_KEY = bytes.fromhex("0123456789ABCDEF0123456789ABCDEF")
+```
 
 3. **スクリプトの実行**
 
